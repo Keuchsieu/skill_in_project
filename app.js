@@ -19,6 +19,18 @@ app.get('', (req, res)=>{
   res.send("Main page");
 });
 
+app.post('save/', (req, res)=>{
+  console.log(req);
+});
+
+app.post('getall/', (req, res)=>{
+  console.log(req);
+});
+
+app.post('getone/', (req, res)=>{
+  console.log(req);
+});
+
 const server = app.listen(port, ()=>{
   console.log("Listening on port" + port);
-})
+});
