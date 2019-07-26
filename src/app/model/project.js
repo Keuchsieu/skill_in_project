@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
-import skillSchema from './skill';
+const SkillSchema = require('./skill');
 
-var inputSchema = mongoose.Schema({
+var ProjectSchema = mongoose.Schema({
   proj_name: String,
-  skills_involved: skillSchema,
+  skills_involved: [SkillSchema],
   situation: String,
   task: String
 });
 
-export default inputSchema;
+
+module.exports = ProjectSchema;
